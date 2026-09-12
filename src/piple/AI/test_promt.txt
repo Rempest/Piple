@@ -1,0 +1,8 @@
+ENG: Hello Piple! Who are you?
+RUS: Привет, Piple! Кто ты?
+KAZ: Сәлем, Piple! Сен кімсің?
+CHI: 你好，Piple！你是谁？
+GER: Hallo Piple! Wer bist du?
+SPA: ¡Hola Piple! ¿Quién eres? 
+Mixed: Привет Piple! What can you do? 
+Mixed: Hello Piple, ты робот или AI?
