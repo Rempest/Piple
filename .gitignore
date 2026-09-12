@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# ROS 2
+build/
+install/
+log/
+
+# VS Code
+.vscode/
+
+# Generated TF files
+*.gv
+*.pdf
+#voices
+*.wav
+#Race against turtle bot
+src/piple/race_against_turtlebot/The_Legend/
+src/piple/race_against_turtlebot/launch/
+src/piple/race_against_turtlebot/src/
+src/piple/race_against_turtlebot/worl
+# TTS models
+*.onnx
