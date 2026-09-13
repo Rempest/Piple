@@ -1,7 +1,7 @@
 <mujoco model="piple_arena">
  
   <compiler angle="degree" meshdir="../meshes" autolimits="true"/>
-  <option timestep="0.005" integrator="implicitfast"/>
+  <option timestep="0.002" integrator="implicitfast" iterations="80" ls_iterations="30" tolerance="1e-8"/>
  
   <visual>
     <headlight ambient="0.35 0.35 0.35" diffuse="0.6 0.6 0.6"/>
@@ -103,7 +103,7 @@
     <geom name="floor" type="plane" size="25 25 0.1" material="floor_mat"/>
  
  
-    <body name="piple_0" pos="-2.0 -2.0 0.08">
+    <body name="piple_0" pos="-2.0 -2.0 0.16">
       <freejoint name="root_0"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -131,7 +131,8 @@
  
       <body name="front_left_0" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_0" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_0" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -146,7 +147,8 @@
  
       <body name="front_right_0" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_0" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_0" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -161,7 +163,8 @@
  
       <body name="rear_left_0" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_0" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_0" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -176,7 +179,8 @@
  
       <body name="rear_right_0" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_0" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_0" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -188,9 +192,10 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
  
-    <body name="piple_1" pos="0.0 -2.0 0.08">
+    <body name="piple_1" pos="0.0 -2.0 0.16">
       <freejoint name="root_1"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -218,7 +223,8 @@
  
       <body name="front_left_1" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_1" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_1" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -233,7 +239,8 @@
  
       <body name="front_right_1" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_1" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_1" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -248,7 +255,8 @@
  
       <body name="rear_left_1" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_1" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_1" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -263,7 +271,8 @@
  
       <body name="rear_right_1" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_1" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_1" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -275,9 +284,10 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
  
-    <body name="piple_2" pos="2.0 -2.0 0.08">
+    <body name="piple_2" pos="2.0 -2.0 0.16">
       <freejoint name="root_2"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -305,7 +315,8 @@
  
       <body name="front_left_2" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_2" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_2" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -320,7 +331,8 @@
  
       <body name="front_right_2" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_2" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_2" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -335,7 +347,8 @@
  
       <body name="rear_left_2" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_2" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_2" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -350,7 +363,8 @@
  
       <body name="rear_right_2" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_2" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_2" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -362,9 +376,10 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
  
-    <body name="piple_3" pos="-2.0 0.0 0.08">
+    <body name="piple_3" pos="-2.0 0.0 0.16">
       <freejoint name="root_3"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -392,7 +407,8 @@
  
       <body name="front_left_3" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_3" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_3" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -407,7 +423,8 @@
  
       <body name="front_right_3" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_3" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_3" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -422,7 +439,8 @@
  
       <body name="rear_left_3" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_3" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_3" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -437,7 +455,8 @@
  
       <body name="rear_right_3" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_3" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_3" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -449,9 +468,10 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
  
-    <body name="piple_4" pos="0.0 0.0 0.08">
+    <body name="piple_4" pos="0.0 0.0 0.16">
       <freejoint name="root_4"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -479,7 +499,8 @@
  
       <body name="front_left_4" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_4" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_4" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -494,7 +515,8 @@
  
       <body name="front_right_4" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_4" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_4" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -509,7 +531,8 @@
  
       <body name="rear_left_4" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_4" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_4" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -524,7 +547,8 @@
  
       <body name="rear_right_4" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_4" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_4" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -536,9 +560,10 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
  
-    <body name="piple_5" pos="2.0 0.0 0.08">
+    <body name="piple_5" pos="2.0 0.0 0.16">
       <freejoint name="root_5"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -566,7 +591,8 @@
  
       <body name="front_left_5" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_5" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_5" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -581,7 +607,8 @@
  
       <body name="front_right_5" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_5" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_5" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -596,7 +623,8 @@
  
       <body name="rear_left_5" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_5" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_5" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -611,7 +639,8 @@
  
       <body name="rear_right_5" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_5" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_5" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -623,9 +652,10 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
  
-    <body name="piple_6" pos="-2.0 2.0 0.08">
+    <body name="piple_6" pos="-2.0 2.0 0.16">
       <freejoint name="root_6"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -653,7 +683,8 @@
  
       <body name="front_left_6" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_6" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_6" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -668,7 +699,8 @@
  
       <body name="front_right_6" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_6" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_6" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -683,7 +715,8 @@
  
       <body name="rear_left_6" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_6" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_6" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -698,7 +731,8 @@
  
       <body name="rear_right_6" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_6" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_6" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -710,9 +744,10 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
  
-    <body name="piple_7" pos="0.0 2.0 0.08">
+    <body name="piple_7" pos="0.0 2.0 0.16">
       <freejoint name="root_7"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -740,7 +775,8 @@
  
       <body name="front_left_7" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_7" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_7" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -755,7 +791,8 @@
  
       <body name="front_right_7" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_7" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_7" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -770,7 +807,8 @@
  
       <body name="rear_left_7" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_7" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_7" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -785,7 +823,8 @@
  
       <body name="rear_right_7" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_7" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_7" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -797,9 +836,10 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
  
-    <body name="piple_8" pos="2.0 2.0 0.08">
+    <body name="piple_8" pos="2.0 2.0 0.16">
       <freejoint name="root_8"/>
       <inertial pos="0 0 0" mass="2.5"
                 diaginertia="0.02 0.04 0.05"/>
@@ -827,7 +867,8 @@
  
       <body name="front_left_8" pos="0.3 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_left_joint_8" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_left_joint_8" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -842,7 +883,8 @@
  
       <body name="front_right_8" pos="0.3 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="front_right_joint_8" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="front_right_joint_8" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -857,7 +899,8 @@
  
       <body name="rear_left_8" pos="-0.05 0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_left_joint_8" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_left_joint_8" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
@@ -872,7 +915,8 @@
  
       <body name="rear_right_8" pos="-0.05 -0.19 -0.08">
         <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
-        <joint name="rear_right_joint_8" type="hinge" axis="0 1 0" limited="false"/>
+        <joint name="rear_right_joint_8" type="hinge" axis="0 1 0" limited="false"
+               damping="0.05" armature="0.001"/>
         <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
         <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
@@ -884,46 +928,47 @@
         <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
               class="collision" friction="1.0 0.005 0.0001"/>
       </body>
+ 
     </body>
   </worldbody>
  
   <actuator>
-    <velocity name="act_front_left_joint_0" joint="front_left_joint_0" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_0" joint="front_right_joint_0" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_0" joint="rear_left_joint_0" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_0" joint="rear_right_joint_0" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_left_joint_1" joint="front_left_joint_1" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_1" joint="front_right_joint_1" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_1" joint="rear_left_joint_1" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_1" joint="rear_right_joint_1" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_left_joint_2" joint="front_left_joint_2" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_2" joint="front_right_joint_2" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_2" joint="rear_left_joint_2" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_2" joint="rear_right_joint_2" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_left_joint_3" joint="front_left_joint_3" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_3" joint="front_right_joint_3" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_3" joint="rear_left_joint_3" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_3" joint="rear_right_joint_3" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_left_joint_4" joint="front_left_joint_4" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_4" joint="front_right_joint_4" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_4" joint="rear_left_joint_4" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_4" joint="rear_right_joint_4" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_left_joint_5" joint="front_left_joint_5" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_5" joint="front_right_joint_5" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_5" joint="rear_left_joint_5" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_5" joint="rear_right_joint_5" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_left_joint_6" joint="front_left_joint_6" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_6" joint="front_right_joint_6" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_6" joint="rear_left_joint_6" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_6" joint="rear_right_joint_6" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_left_joint_7" joint="front_left_joint_7" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_7" joint="front_right_joint_7" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_7" joint="rear_left_joint_7" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_7" joint="rear_right_joint_7" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_left_joint_8" joint="front_left_joint_8" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_front_right_joint_8" joint="front_right_joint_8" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_left_joint_8" joint="rear_left_joint_8" kv="8" ctrlrange="-30 30"/>
-    <velocity name="act_rear_right_joint_8" joint="rear_right_joint_8" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_0" joint="front_left_joint_0" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_0" joint="front_right_joint_0" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_0" joint="rear_left_joint_0" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_0" joint="rear_right_joint_0" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_left_joint_1" joint="front_left_joint_1" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_1" joint="front_right_joint_1" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_1" joint="rear_left_joint_1" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_1" joint="rear_right_joint_1" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_left_joint_2" joint="front_left_joint_2" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_2" joint="front_right_joint_2" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_2" joint="rear_left_joint_2" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_2" joint="rear_right_joint_2" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_left_joint_3" joint="front_left_joint_3" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_3" joint="front_right_joint_3" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_3" joint="rear_left_joint_3" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_3" joint="rear_right_joint_3" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_left_joint_4" joint="front_left_joint_4" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_4" joint="front_right_joint_4" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_4" joint="rear_left_joint_4" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_4" joint="rear_right_joint_4" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_left_joint_5" joint="front_left_joint_5" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_5" joint="front_right_joint_5" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_5" joint="rear_left_joint_5" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_5" joint="rear_right_joint_5" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_left_joint_6" joint="front_left_joint_6" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_6" joint="front_right_joint_6" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_6" joint="rear_left_joint_6" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_6" joint="rear_right_joint_6" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_left_joint_7" joint="front_left_joint_7" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_7" joint="front_right_joint_7" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_7" joint="rear_left_joint_7" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_7" joint="rear_right_joint_7" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_left_joint_8" joint="front_left_joint_8" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_front_right_joint_8" joint="front_right_joint_8" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_left_joint_8" joint="rear_left_joint_8" kv="8" ctrlrange="-12 12"/>
+    <velocity name="act_rear_right_joint_8" joint="rear_right_joint_8" kv="8" ctrlrange="-12 12"/>
   </actuator>
  
   <sensor>
