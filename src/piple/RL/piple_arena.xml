@@ -1,0 +1,1040 @@
+<mujoco model="piple_arena">
+ 
+  <compiler angle="degree" meshdir="../meshes" autolimits="true"/>
+  <option timestep="0.005" integrator="implicitfast"/>
+ 
+  <visual>
+    <headlight ambient="0.35 0.35 0.35" diffuse="0.6 0.6 0.6"/>
+    <global offwidth="1280" offheight="720"/>
+  </visual>
+ 
+  <asset>
+    <material name="floor_mat" rgba="0.68 0.68 0.68 1" reflectance="0.0" specular="0.0" shininess="0.0"/>
+ 
+    <material name="base_Material.001" rgba="0.000000 0.384475 0.001690 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="base_Material.003" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="base_Material.006" rgba="0.000000 0.799999 0.087484 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="base_carbon_princ" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="base_basic_metalic" rgba="0.002648 0.799999 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <mesh name="base_mesh_0" file="piple_base_link/piple_base_link_0.obj"/>
+    <mesh name="base_mesh_1" file="piple_base_link/piple_base_link_1.obj"/>
+    <mesh name="base_mesh_2" file="piple_base_link/piple_base_link_2.obj"/>
+    <mesh name="base_mesh_3" file="piple_base_link/piple_base_link_3.obj"/>
+    <mesh name="base_mesh_4" file="piple_base_link/piple_base_link_4.obj"/>
+    <material name="front_left_rim5.001" rgba="0.038492 1.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_left_rim.001" rgba="0.101837 0.101837 0.101837 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_left_tire_.001" rgba="0.085612 0.085612 0.085612 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_left_rim_2.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_left_rim4.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_left_thread.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_left_rim3.001" rgba="0.031500 0.782911 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_left_Material.006" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <mesh name="front_left_mesh_0" file="front_left_wheel_link/front_left_wheel_link_0.obj"/>
+    <mesh name="front_left_mesh_1" file="front_left_wheel_link/front_left_wheel_link_1.obj"/>
+    <mesh name="front_left_mesh_2" file="front_left_wheel_link/front_left_wheel_link_2.obj"/>
+    <mesh name="front_left_mesh_3" file="front_left_wheel_link/front_left_wheel_link_3.obj"/>
+    <mesh name="front_left_mesh_4" file="front_left_wheel_link/front_left_wheel_link_4.obj"/>
+    <mesh name="front_left_mesh_5" file="front_left_wheel_link/front_left_wheel_link_5.obj"/>
+    <mesh name="front_left_mesh_6" file="front_left_wheel_link/front_left_wheel_link_6.obj"/>
+    <mesh name="front_left_mesh_7" file="front_left_wheel_link/front_left_wheel_link_7.obj"/>
+    <material name="front_right_rim5.001" rgba="0.038492 1.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_right_rim.001" rgba="0.101837 0.101837 0.101837 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_right_tire_.001" rgba="0.085612 0.085612 0.085612 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_right_rim_2.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_right_rim4.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_right_thread.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_right_rim3.001" rgba="0.031500 0.782911 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="front_right_Material.006" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <mesh name="front_right_mesh_0" file="front_right_wheel_link/front_right_wheel_link_0.obj"/>
+    <mesh name="front_right_mesh_1" file="front_right_wheel_link/front_right_wheel_link_1.obj"/>
+    <mesh name="front_right_mesh_2" file="front_right_wheel_link/front_right_wheel_link_2.obj"/>
+    <mesh name="front_right_mesh_3" file="front_right_wheel_link/front_right_wheel_link_3.obj"/>
+    <mesh name="front_right_mesh_4" file="front_right_wheel_link/front_right_wheel_link_4.obj"/>
+    <mesh name="front_right_mesh_5" file="front_right_wheel_link/front_right_wheel_link_5.obj"/>
+    <mesh name="front_right_mesh_6" file="front_right_wheel_link/front_right_wheel_link_6.obj"/>
+    <mesh name="front_right_mesh_7" file="front_right_wheel_link/front_right_wheel_link_7.obj"/>
+    <material name="rear_left_rim5.001" rgba="0.038492 1.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_left_rim.001" rgba="0.101837 0.101837 0.101837 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_left_tire_.001" rgba="0.085612 0.085612 0.085612 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_left_rim_2.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_left_rim4.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_left_thread.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_left_rim3.001" rgba="0.031500 0.782911 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_left_Material.006" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <mesh name="rear_left_mesh_0" file="rear_left_wheel_link/rear_left_wheel_link_0.obj"/>
+    <mesh name="rear_left_mesh_1" file="rear_left_wheel_link/rear_left_wheel_link_1.obj"/>
+    <mesh name="rear_left_mesh_2" file="rear_left_wheel_link/rear_left_wheel_link_2.obj"/>
+    <mesh name="rear_left_mesh_3" file="rear_left_wheel_link/rear_left_wheel_link_3.obj"/>
+    <mesh name="rear_left_mesh_4" file="rear_left_wheel_link/rear_left_wheel_link_4.obj"/>
+    <mesh name="rear_left_mesh_5" file="rear_left_wheel_link/rear_left_wheel_link_5.obj"/>
+    <mesh name="rear_left_mesh_6" file="rear_left_wheel_link/rear_left_wheel_link_6.obj"/>
+    <mesh name="rear_left_mesh_7" file="rear_left_wheel_link/rear_left_wheel_link_7.obj"/>
+    <material name="rear_right_rim5.001" rgba="0.038492 1.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_right_rim.001" rgba="0.101837 0.101837 0.101837 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_right_tire_.001" rgba="0.085612 0.085612 0.085612 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_right_rim_2.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_right_rim4.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_right_thread.001" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_right_rim3.001" rgba="0.031500 0.782911 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <material name="rear_right_Material.006" rgba="0.000000 0.000000 0.000000 1.000000" specular="0.3" shininess="0.15"/>
+    <mesh name="rear_right_mesh_0" file="rear_right_wheel_link/rear_right_wheel_link_0.obj"/>
+    <mesh name="rear_right_mesh_1" file="rear_right_wheel_link/rear_right_wheel_link_1.obj"/>
+    <mesh name="rear_right_mesh_2" file="rear_right_wheel_link/rear_right_wheel_link_2.obj"/>
+    <mesh name="rear_right_mesh_3" file="rear_right_wheel_link/rear_right_wheel_link_3.obj"/>
+    <mesh name="rear_right_mesh_4" file="rear_right_wheel_link/rear_right_wheel_link_4.obj"/>
+    <mesh name="rear_right_mesh_5" file="rear_right_wheel_link/rear_right_wheel_link_5.obj"/>
+    <mesh name="rear_right_mesh_6" file="rear_right_wheel_link/rear_right_wheel_link_6.obj"/>
+    <mesh name="rear_right_mesh_7" file="rear_right_wheel_link/rear_right_wheel_link_7.obj"/>
+  </asset>
+ 
+  <default>
+    <default class="visual">
+      <geom contype="0" conaffinity="0" group="2"/>
+    </default>
+    <default class="collision">
+      <geom group="3" rgba="0 0 0 0" friction="0.9 0.005 0.0001"/>
+    </default>
+  </default>
+ 
+  <worldbody>
+    <light name="sun" pos="0 0 6" dir="-0.3 -0.3 -1" directional="true"
+           diffuse="0.85 0.85 0.8" specular="0.0 0.0 0.0" castshadow="false"/>
+ 
+    <geom name="floor" type="plane" size="25 25 0.1" material="floor_mat"/>
+ 
+ 
+    <body name="piple_0" pos="-2.0 -2.0 0.08">
+      <freejoint name="root_0"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_0" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_0" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_0" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_0" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_0" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_0" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_0" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_0" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_0" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_0" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_0" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_0" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_0" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_0" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_0" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_0" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_0" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_0" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_0" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+ 
+    <body name="piple_1" pos="0.0 -2.0 0.08">
+      <freejoint name="root_1"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_1" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_1" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_1" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_1" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_1" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_1" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_1" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_1" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_1" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_1" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_1" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_1" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_1" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_1" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_1" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_1" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_1" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_1" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_1" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+ 
+    <body name="piple_2" pos="2.0 -2.0 0.08">
+      <freejoint name="root_2"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_2" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_2" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_2" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_2" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_2" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_2" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_2" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_2" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_2" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_2" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_2" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_2" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_2" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_2" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_2" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_2" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_2" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_2" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_2" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+ 
+    <body name="piple_3" pos="-2.0 0.0 0.08">
+      <freejoint name="root_3"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_3" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_3" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_3" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_3" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_3" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_3" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_3" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_3" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_3" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_3" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_3" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_3" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_3" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_3" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_3" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_3" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_3" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_3" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_3" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+ 
+    <body name="piple_4" pos="0.0 0.0 0.08">
+      <freejoint name="root_4"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_4" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_4" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_4" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_4" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_4" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_4" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_4" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_4" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_4" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_4" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_4" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_4" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_4" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_4" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_4" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_4" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_4" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_4" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_4" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+ 
+    <body name="piple_5" pos="2.0 0.0 0.08">
+      <freejoint name="root_5"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_5" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_5" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_5" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_5" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_5" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_5" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_5" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_5" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_5" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_5" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_5" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_5" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_5" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_5" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_5" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_5" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_5" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_5" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_5" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+ 
+    <body name="piple_6" pos="-2.0 2.0 0.08">
+      <freejoint name="root_6"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_6" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_6" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_6" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_6" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_6" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_6" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_6" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_6" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_6" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_6" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_6" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_6" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_6" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_6" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_6" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_6" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_6" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_6" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_6" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+ 
+    <body name="piple_7" pos="0.0 2.0 0.08">
+      <freejoint name="root_7"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_7" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_7" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_7" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_7" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_7" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_7" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_7" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_7" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_7" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_7" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_7" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_7" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_7" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_7" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_7" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_7" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_7" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_7" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_7" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+ 
+    <body name="piple_8" pos="2.0 2.0 0.08">
+      <freejoint name="root_8"/>
+      <inertial pos="0 0 0" mass="2.5"
+                diaginertia="0.02 0.04 0.05"/>
+ 
+        <geom type="mesh" mesh="base_mesh_0" material="base_Material.001" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_1" material="base_Material.003" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_2" material="base_Material.006" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_3" material="base_carbon_princ" pos="0.02 -0.02 0" class="visual"/>
+        <geom type="mesh" mesh="base_mesh_4" material="base_basic_metalic" pos="0.02 -0.02 0" class="visual"/>
+      <geom type="box" size="0.15 0.125 0.05" class="collision"/>
+ 
+      <site name="cam_site_8" pos="0.3 -0.04 -0.167" size="0.01"/>
+      <camera name="cam_8" pos="0.3 -0.04 -0.167" mode="fixed" fovy="90"/>
+ 
+      <site name="lidar_site_8" pos="0.09 -0.02 0.065" size="0.01"/>
+        <site name="range0_8" pos="0.09 -0.02 0.065" euler="0 0 0.0" size="0.005"/>
+        <site name="range1_8" pos="0.09 -0.02 0.065" euler="0 0 45.0" size="0.005"/>
+        <site name="range2_8" pos="0.09 -0.02 0.065" euler="0 0 90.0" size="0.005"/>
+        <site name="range3_8" pos="0.09 -0.02 0.065" euler="0 0 135.0" size="0.005"/>
+        <site name="range4_8" pos="0.09 -0.02 0.065" euler="0 0 180.0" size="0.005"/>
+        <site name="range5_8" pos="0.09 -0.02 0.065" euler="0 0 225.0" size="0.005"/>
+        <site name="range6_8" pos="0.09 -0.02 0.065" euler="0 0 270.0" size="0.005"/>
+        <site name="range7_8" pos="0.09 -0.02 0.065" euler="0 0 315.0" size="0.005"/>
+ 
+ 
+      <body name="front_left_8" pos="0.3 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_left_joint_8" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_left_mesh_0" material="front_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_1" material="front_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_2" material="front_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_3" material="front_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_4" material="front_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_5" material="front_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_6" material="front_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_left_mesh_7" material="front_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="front_right_8" pos="0.3 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="front_right_joint_8" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="front_right_mesh_0" material="front_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_1" material="front_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_2" material="front_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_3" material="front_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_4" material="front_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_5" material="front_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_6" material="front_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="front_right_mesh_7" material="front_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_left_8" pos="-0.05 0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_left_joint_8" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_left_mesh_0" material="rear_left_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_1" material="rear_left_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_2" material="rear_left_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_3" material="rear_left_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_4" material="rear_left_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_5" material="rear_left_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_6" material="rear_left_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_left_mesh_7" material="rear_left_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+ 
+      <body name="rear_right_8" pos="-0.05 -0.19 -0.08">
+        <inertial pos="0 0 0" mass="0.25" diaginertia="0.00043 0.00079 0.00043"/>
+        <joint name="rear_right_joint_8" type="hinge" axis="0 1 0" limited="false"/>
+        <geom type="mesh" mesh="rear_right_mesh_0" material="rear_right_rim5.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_1" material="rear_right_rim.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_2" material="rear_right_tire_.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_3" material="rear_right_rim_2.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_4" material="rear_right_rim4.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_5" material="rear_right_thread.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_6" material="rear_right_rim3.001" pos="0 0 0" class="visual"/>
+        <geom type="mesh" mesh="rear_right_mesh_7" material="rear_right_Material.006" pos="0 0 0" class="visual"/>
+        <geom type="cylinder" size="0.0795 0.0225" euler="90 0 0"
+              class="collision" friction="1.0 0.005 0.0001"/>
+      </body>
+    </body>
+  </worldbody>
+ 
+  <actuator>
+    <velocity name="act_front_left_joint_0" joint="front_left_joint_0" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_0" joint="front_right_joint_0" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_0" joint="rear_left_joint_0" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_0" joint="rear_right_joint_0" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_1" joint="front_left_joint_1" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_1" joint="front_right_joint_1" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_1" joint="rear_left_joint_1" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_1" joint="rear_right_joint_1" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_2" joint="front_left_joint_2" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_2" joint="front_right_joint_2" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_2" joint="rear_left_joint_2" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_2" joint="rear_right_joint_2" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_3" joint="front_left_joint_3" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_3" joint="front_right_joint_3" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_3" joint="rear_left_joint_3" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_3" joint="rear_right_joint_3" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_4" joint="front_left_joint_4" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_4" joint="front_right_joint_4" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_4" joint="rear_left_joint_4" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_4" joint="rear_right_joint_4" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_5" joint="front_left_joint_5" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_5" joint="front_right_joint_5" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_5" joint="rear_left_joint_5" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_5" joint="rear_right_joint_5" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_6" joint="front_left_joint_6" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_6" joint="front_right_joint_6" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_6" joint="rear_left_joint_6" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_6" joint="rear_right_joint_6" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_7" joint="front_left_joint_7" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_7" joint="front_right_joint_7" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_7" joint="rear_left_joint_7" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_7" joint="rear_right_joint_7" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_left_joint_8" joint="front_left_joint_8" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_front_right_joint_8" joint="front_right_joint_8" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_left_joint_8" joint="rear_left_joint_8" kv="8" ctrlrange="-30 30"/>
+    <velocity name="act_rear_right_joint_8" joint="rear_right_joint_8" kv="8" ctrlrange="-30 30"/>
+  </actuator>
+ 
+  <sensor>
+    <framepos name="pos_0" objtype="body" objname="piple_0"/>
+    <framequat name="quat_0" objtype="body" objname="piple_0"/>
+    <framelinvel name="linvel_0" objtype="body" objname="piple_0"/>
+    <frameangvel name="angvel_0" objtype="body" objname="piple_0"/>
+    <rangefinder name="rf_range0_0" site="range0_0" cutoff="5.0"/>
+    <rangefinder name="rf_range1_0" site="range1_0" cutoff="5.0"/>
+    <rangefinder name="rf_range2_0" site="range2_0" cutoff="5.0"/>
+    <rangefinder name="rf_range3_0" site="range3_0" cutoff="5.0"/>
+    <rangefinder name="rf_range4_0" site="range4_0" cutoff="5.0"/>
+    <rangefinder name="rf_range5_0" site="range5_0" cutoff="5.0"/>
+    <rangefinder name="rf_range6_0" site="range6_0" cutoff="5.0"/>
+    <rangefinder name="rf_range7_0" site="range7_0" cutoff="5.0"/>
+    <framepos name="pos_1" objtype="body" objname="piple_1"/>
+    <framequat name="quat_1" objtype="body" objname="piple_1"/>
+    <framelinvel name="linvel_1" objtype="body" objname="piple_1"/>
+    <frameangvel name="angvel_1" objtype="body" objname="piple_1"/>
+    <rangefinder name="rf_range0_1" site="range0_1" cutoff="5.0"/>
+    <rangefinder name="rf_range1_1" site="range1_1" cutoff="5.0"/>
+    <rangefinder name="rf_range2_1" site="range2_1" cutoff="5.0"/>
+    <rangefinder name="rf_range3_1" site="range3_1" cutoff="5.0"/>
+    <rangefinder name="rf_range4_1" site="range4_1" cutoff="5.0"/>
+    <rangefinder name="rf_range5_1" site="range5_1" cutoff="5.0"/>
+    <rangefinder name="rf_range6_1" site="range6_1" cutoff="5.0"/>
+    <rangefinder name="rf_range7_1" site="range7_1" cutoff="5.0"/>
+    <framepos name="pos_2" objtype="body" objname="piple_2"/>
+    <framequat name="quat_2" objtype="body" objname="piple_2"/>
+    <framelinvel name="linvel_2" objtype="body" objname="piple_2"/>
+    <frameangvel name="angvel_2" objtype="body" objname="piple_2"/>
+    <rangefinder name="rf_range0_2" site="range0_2" cutoff="5.0"/>
+    <rangefinder name="rf_range1_2" site="range1_2" cutoff="5.0"/>
+    <rangefinder name="rf_range2_2" site="range2_2" cutoff="5.0"/>
+    <rangefinder name="rf_range3_2" site="range3_2" cutoff="5.0"/>
+    <rangefinder name="rf_range4_2" site="range4_2" cutoff="5.0"/>
+    <rangefinder name="rf_range5_2" site="range5_2" cutoff="5.0"/>
+    <rangefinder name="rf_range6_2" site="range6_2" cutoff="5.0"/>
+    <rangefinder name="rf_range7_2" site="range7_2" cutoff="5.0"/>
+    <framepos name="pos_3" objtype="body" objname="piple_3"/>
+    <framequat name="quat_3" objtype="body" objname="piple_3"/>
+    <framelinvel name="linvel_3" objtype="body" objname="piple_3"/>
+    <frameangvel name="angvel_3" objtype="body" objname="piple_3"/>
+    <rangefinder name="rf_range0_3" site="range0_3" cutoff="5.0"/>
+    <rangefinder name="rf_range1_3" site="range1_3" cutoff="5.0"/>
+    <rangefinder name="rf_range2_3" site="range2_3" cutoff="5.0"/>
+    <rangefinder name="rf_range3_3" site="range3_3" cutoff="5.0"/>
+    <rangefinder name="rf_range4_3" site="range4_3" cutoff="5.0"/>
+    <rangefinder name="rf_range5_3" site="range5_3" cutoff="5.0"/>
+    <rangefinder name="rf_range6_3" site="range6_3" cutoff="5.0"/>
+    <rangefinder name="rf_range7_3" site="range7_3" cutoff="5.0"/>
+    <framepos name="pos_4" objtype="body" objname="piple_4"/>
+    <framequat name="quat_4" objtype="body" objname="piple_4"/>
+    <framelinvel name="linvel_4" objtype="body" objname="piple_4"/>
+    <frameangvel name="angvel_4" objtype="body" objname="piple_4"/>
+    <rangefinder name="rf_range0_4" site="range0_4" cutoff="5.0"/>
+    <rangefinder name="rf_range1_4" site="range1_4" cutoff="5.0"/>
+    <rangefinder name="rf_range2_4" site="range2_4" cutoff="5.0"/>
+    <rangefinder name="rf_range3_4" site="range3_4" cutoff="5.0"/>
+    <rangefinder name="rf_range4_4" site="range4_4" cutoff="5.0"/>
+    <rangefinder name="rf_range5_4" site="range5_4" cutoff="5.0"/>
+    <rangefinder name="rf_range6_4" site="range6_4" cutoff="5.0"/>
+    <rangefinder name="rf_range7_4" site="range7_4" cutoff="5.0"/>
+    <framepos name="pos_5" objtype="body" objname="piple_5"/>
+    <framequat name="quat_5" objtype="body" objname="piple_5"/>
+    <framelinvel name="linvel_5" objtype="body" objname="piple_5"/>
+    <frameangvel name="angvel_5" objtype="body" objname="piple_5"/>
+    <rangefinder name="rf_range0_5" site="range0_5" cutoff="5.0"/>
+    <rangefinder name="rf_range1_5" site="range1_5" cutoff="5.0"/>
+    <rangefinder name="rf_range2_5" site="range2_5" cutoff="5.0"/>
+    <rangefinder name="rf_range3_5" site="range3_5" cutoff="5.0"/>
+    <rangefinder name="rf_range4_5" site="range4_5" cutoff="5.0"/>
+    <rangefinder name="rf_range5_5" site="range5_5" cutoff="5.0"/>
+    <rangefinder name="rf_range6_5" site="range6_5" cutoff="5.0"/>
+    <rangefinder name="rf_range7_5" site="range7_5" cutoff="5.0"/>
+    <framepos name="pos_6" objtype="body" objname="piple_6"/>
+    <framequat name="quat_6" objtype="body" objname="piple_6"/>
+    <framelinvel name="linvel_6" objtype="body" objname="piple_6"/>
+    <frameangvel name="angvel_6" objtype="body" objname="piple_6"/>
+    <rangefinder name="rf_range0_6" site="range0_6" cutoff="5.0"/>
+    <rangefinder name="rf_range1_6" site="range1_6" cutoff="5.0"/>
+    <rangefinder name="rf_range2_6" site="range2_6" cutoff="5.0"/>
+    <rangefinder name="rf_range3_6" site="range3_6" cutoff="5.0"/>
+    <rangefinder name="rf_range4_6" site="range4_6" cutoff="5.0"/>
+    <rangefinder name="rf_range5_6" site="range5_6" cutoff="5.0"/>
+    <rangefinder name="rf_range6_6" site="range6_6" cutoff="5.0"/>
+    <rangefinder name="rf_range7_6" site="range7_6" cutoff="5.0"/>
+    <framepos name="pos_7" objtype="body" objname="piple_7"/>
+    <framequat name="quat_7" objtype="body" objname="piple_7"/>
+    <framelinvel name="linvel_7" objtype="body" objname="piple_7"/>
+    <frameangvel name="angvel_7" objtype="body" objname="piple_7"/>
+    <rangefinder name="rf_range0_7" site="range0_7" cutoff="5.0"/>
+    <rangefinder name="rf_range1_7" site="range1_7" cutoff="5.0"/>
+    <rangefinder name="rf_range2_7" site="range2_7" cutoff="5.0"/>
+    <rangefinder name="rf_range3_7" site="range3_7" cutoff="5.0"/>
+    <rangefinder name="rf_range4_7" site="range4_7" cutoff="5.0"/>
+    <rangefinder name="rf_range5_7" site="range5_7" cutoff="5.0"/>
+    <rangefinder name="rf_range6_7" site="range6_7" cutoff="5.0"/>
+    <rangefinder name="rf_range7_7" site="range7_7" cutoff="5.0"/>
+    <framepos name="pos_8" objtype="body" objname="piple_8"/>
+    <framequat name="quat_8" objtype="body" objname="piple_8"/>
+    <framelinvel name="linvel_8" objtype="body" objname="piple_8"/>
+    <frameangvel name="angvel_8" objtype="body" objname="piple_8"/>
+    <rangefinder name="rf_range0_8" site="range0_8" cutoff="5.0"/>
+    <rangefinder name="rf_range1_8" site="range1_8" cutoff="5.0"/>
+    <rangefinder name="rf_range2_8" site="range2_8" cutoff="5.0"/>
+    <rangefinder name="rf_range3_8" site="range3_8" cutoff="5.0"/>
+    <rangefinder name="rf_range4_8" site="range4_8" cutoff="5.0"/>
+    <rangefinder name="rf_range5_8" site="range5_8" cutoff="5.0"/>
+    <rangefinder name="rf_range6_8" site="range6_8" cutoff="5.0"/>
+    <rangefinder name="rf_range7_8" site="range7_8" cutoff="5.0"/>
+  </sensor>
+ 
+</mujoco>
